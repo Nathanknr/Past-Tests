@@ -2,25 +2,18 @@
 #show: e.prepare()
 #show: e.set_(config, show-solutions: false)
 
-// ---------- Metadata ----------
 #set document(
   title: "Discrete Mathematics, Test 2 (October 2026)",
 )
 
-// ---------- Font size and spacing ----------
 #set text(size: 12.8pt)
 #set par(leading: 0.95em, spacing: 1.4em)
 
-// Re-center block equations (examy appears to override the alignment)
-// and give them breathing room
 #show math.equation.where(block: true): set align(center)
 #show math.equation.where(block: true): set block(above: 1.4em, below: 1.4em)
 
-// ---------- Roman numerals ----------
-// Lowercase roman for lists and parts: (i), (ii), (iii)
 #set enum(numbering: "(i)")
 
-// ---------- Title block ----------
 #align(center)[
   #text(size: 20pt, weight: "bold")[Discrete Mathematics] \
   #v(0.2em)
@@ -78,21 +71,6 @@
         Hence, use the closed form obtained to find the generating function
         of this recurrence relation.
         Give your answer as a single rational fraction.
-        #solution[
-          Let $y = 3x$. Using
-          $sum y^n = 1/(1-y)$, $sum n y^n = y/(1-y)^2$ and
-          $sum n^2 y^n = (y(1+y))/(1-y)^3$,
-          $
-            G(x) = (3y(1+y))/(1-y)^3 - (2y)/(1-y)^2 + 2/(1-y)
-            = (7y^2 - 3y + 2)/(1-y)^3.
-          $
-          Substituting $y = 3x$,
-          $
-            G(x) = (63 x^2 - 9 x + 2)/(1 - 3x)^3.
-          $
-        ]
-      ]
-    ]
 
     #question()[
       Suppose a recurrence relation has characteristic roots $2$, $2$, $2$ and $-1$.
